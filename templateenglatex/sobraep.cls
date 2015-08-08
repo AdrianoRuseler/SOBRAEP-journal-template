@@ -36,6 +36,8 @@
 
 \LoadClass[10pt,twocolumn]{article}
 
+
+
 \RequirePackage{ifthen}
 \RequirePackage{setspace}
 \RequirePackage{fancyhdr}
@@ -157,7 +159,7 @@
 \addto\captionsenglish{\renewcommand{\refname}{REFERENCES}}
 \addto\captionsbrazil{\renewcommand{\refname}{REFERÊNCIAS}}
 
-%Elimina a numerção de página
+%Elimina a numeração de página
 \pagestyle{empty}
 
 %Espaçamento entre paragrafos
