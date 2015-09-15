@@ -41,7 +41,7 @@
 \RequirePackage{ifthen}
 \RequirePackage{setspace}
 \RequirePackage{fancyhdr}
-\RequirePackage[latin1]{inputenc}
+\RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{graphicx}
 \RequirePackage{float}
@@ -68,6 +68,15 @@
 %*******************************************************************
 \RequirePackage{datetime}
 
+\RequirePackage{siunitx} % A comprehensive (SI) units package
+
+\sisetup{
+	round-mode = places,
+	round-precision = 2
+}
+
+\DeclareSIUnit \voltampere {VA} %apparent power 
+\DeclareSIUnit \var {var} %volt-ampere reactive - idle power 
 
 
 %*******************************************************************
