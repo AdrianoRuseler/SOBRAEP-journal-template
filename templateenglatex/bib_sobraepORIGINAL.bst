@@ -477,13 +477,12 @@ FUNCTION {format.editors}
   if$
 }
 FUNCTION {format.doi}
-{ 
-%doi empty$
-%   { "" }
-%    {
-%     "\doi{" doi * "}" *
-%    }
-%  if$
+{ doi empty$
+    { "" }
+    {
+      "\doi{" doi * "}" *
+    }
+  if$
 }
 FUNCTION {format.note}
 {

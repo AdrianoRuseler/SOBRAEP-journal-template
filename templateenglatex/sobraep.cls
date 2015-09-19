@@ -168,6 +168,22 @@
 \addto\captionsenglish{\renewcommand{\refname}{REFERENCES}}
 \addto\captionsbrazil{\renewcommand{\refname}{REFERÊNCIAS}}
 
+% Macros for Cross-reference
+\ifnum \configlanguage = 1 % english
+\newcommand{\figref}[1]{Figure~\ref{#1}}   % Cross-reference of figures
+\newcommand{\tabref}[1]{Table~\ref{#1}}    % Cross-reference of tables
+\newcommand{\eqnref}[1]{\eqref{#1}}      % Cross-reference of equations
+\newcommand{\secref}[1]{Section~\ref{#1}}  % Cross-reference of equations
+\newcommand{\defref}[1]{Definition~\ref{#1}} % 
+\else
+\newcommand{\figref}[1]{Figura~\ref{#1}}   % Cross-reference of figures
+\newcommand{\tabref}[1]{Tabela~\ref{#1}}    % Cross-reference of tables
+\newcommand{\eqnref}[1]{\eqref{#1}}      % Cross-reference of equations
+\newcommand{\secref}[1]{Seção~\ref{#1}}  % Cross-reference of equations
+\newcommand{\defref}[1]{Definição~\ref{#1}} % 
+\fi
+
+
 %Elimina a numeração de página
 \pagestyle{empty}
 
