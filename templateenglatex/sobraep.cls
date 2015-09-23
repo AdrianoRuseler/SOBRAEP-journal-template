@@ -65,6 +65,7 @@
 \RequirePackage{booktabs}
 \RequirePackage{balance}
 
+
 %*******************************************************************
 \RequirePackage{datetime}
 
@@ -113,6 +114,7 @@
 
 \newcommand{\titulo}[1]{\gdef\@portuguesetitle{#1}} %
 
+
 %Resumos e Abstract
 \newenvironment{resumo}{\noindent\hspace*{4mm}\normalsize{\bf{\em Resumo --}}\normalsize\bf}{\par\rm\small\medskip\medskip}
 
@@ -129,25 +131,29 @@
 \def\thesubsubsection {\arabic{subsubsection})\hskip-7.2pt}
 
 \renewcommand\section{\@startsection {section}{1}{\z@}{2.0ex plus
-									    0.5ex minus .2ex}{2.0ex plus 0.3ex minus .2ex}{\centering}}
+									    0.5ex minus .2ex}{2.0ex plus 0.3ex minus .2ex}{\centering\MakeUppercase}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}{1.8ex plus
 		                                0.5ex minus .2ex}{0.2ex plus .0ex}{\it\raggedright}}
 \renewcommand\subsubsection[1]{\@startsection{subsubsection}{3}{4mm}{-2.5ex plus
 								       -1ex minus-.2ex}{-0.6ex}{\it\raggedright}{#1:}}
 
-\def\maketitle{\par %
+
+
+\def\maketitle{\par % \MakeUppercase 
 	\begingroup %
 		\twocolumn[\@maketitle]
-	\endgroup %
+	\endgroup %   
 	\let\maketitle\relax \let\@maketitle\relax
 } %
+
 \def\@maketitle{ \centering
-	{\Large \bf \ifnum \configlanguage = 1 \@title 	\else  \@portuguesetitle \fi  \par} 
+	{\Large \bf  {\ifnum \configlanguage = 1 \@title	\else  \@portuguesetitle \fi}  \par} 
 	\vskip 16.75pt
 	{\large\@author}
 	\vskip 9mm}
 
-\def\englishtitle{ {\centering\large\bf\@title\par} \medskip\medskip }
+\def\englishtitle{ {\centering\large\bf\@title \par} \medskip\medskip }
+
 
 %footnote rule
 \renewcommand\footnoterule{\noindent\rule{5.075cm}{0.85pt}\vskip 6pt}
@@ -183,6 +189,7 @@
 \newcommand{\defref}[1]{Definição~\ref{#1}} % 
 \fi
 
+\newcommand{\editorfootnote}[1]{\let\thefootnote\relax\footnotetext{\hspace*{-5mm} #1}}   % Editor footnote
 
 %Elimina a numeração de página
 \pagestyle{empty}
@@ -251,8 +258,6 @@
 
 	
 }
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of IEEEtran.cls  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
